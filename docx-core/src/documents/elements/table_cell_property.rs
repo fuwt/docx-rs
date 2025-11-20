@@ -33,6 +33,14 @@ impl TableCellProperty {
         self
     }
 
+    pub fn get_width(&self) -> usize {
+        if let Some(w) = &self.width {
+            w.get()
+        } else {
+            0usize
+        }
+    }
+
     pub fn vertical_merge(mut self, t: VMergeType) -> TableCellProperty {
         self.vertical_merge = Some(VMerge::new(t));
         self

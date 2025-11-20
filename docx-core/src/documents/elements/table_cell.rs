@@ -120,6 +120,10 @@ impl TableCell {
         self
     }
 
+    pub fn get_width(&self) -> usize {
+        self.property.get_width()
+    }
+
     pub fn set_border(mut self, border: TableCellBorder) -> Self {
         self.property = self.property.set_border(border);
         self

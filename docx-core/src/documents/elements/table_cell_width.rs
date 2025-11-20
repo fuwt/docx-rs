@@ -16,6 +16,10 @@ impl TableCellWidth {
     pub fn new(width: usize, width_type: WidthType) -> TableCellWidth {
         TableCellWidth { width, width_type }
     }
+
+    pub fn get(&self) -> usize {
+        self.width
+    }
 }
 
 impl BuildXML for TableCellWidth {
